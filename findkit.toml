@@ -1,0 +1,27 @@
+## See all options at https://findk.it/toml
+id = "p4VGZRVGQ"
+
+name = "vierityspalkki.fi"
+description = "Demo at vierityspalkki.findkit.com"
+
+[[targets]]
+host = "vierityspalkki.fi"
+concurrency = 2
+max_pages = 6000
+
+# On /toimistot/* .block-releases-big-list contains duplicate content which
+# already is on dedicated page at /julkaisut/*
+cleanup_selector = ".block-releases-big-list"
+
+# Pick the title before the first dash or hyphen
+title_selector_regex = '^(.+) [-–]{1}'
+
+[[targets.tags]]
+# Tag content types for grouping
+pathname_regex = '^\/(toimistot|julkaisut|tyopaikat)\/'
+on_match = "$1"
+
+[[targets.tags]]
+# URLs like https://vierityspalkki.fi/2023/10/10/*
+pathname_regex = '^\/[0-9]{4}\/'
+on_match = "artikkeli"

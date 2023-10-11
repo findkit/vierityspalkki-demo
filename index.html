@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vierityspalkki - Findkit</title>
+    <style>
+      body {
+        font-family: "Helvetica Neue", sans-serif;
+        background-color: gray;
+      }
+    </style>
+
+    <link
+      rel="preload"
+      href="https://cdn.findkit.com/ui/v0.7.0/esm/implementation.js"
+      as="script"
+    />
+
+    <script type="module">
+      import {
+        FindkitUI,
+        css,
+      } from "https://cdn.findkit.com/ui/v0.7.0/esm/index.js";
+
+      const ui = new FindkitUI({
+        publicToken: "p4VGZRVGQ",
+        css: css`
+          .findkit--container {
+            --findkit--brand-color: #343434;
+          }
+        `,
+      });
+
+      // ui.open();
+      ui.openFrom(".open");
+    </script>
+  </head>
+
+  <body>
+    <button class="open" type="button">Hae Viertyspalkista</button>
+  </body>
+</html>
