@@ -9,9 +9,8 @@ host = "vierityspalkki.fi"
 concurrency = 2
 max_pages = 6000
 
-# On /toimistot/* .block-releases-big-list contains duplicate content which
-# already is on dedicated page at /julkaisut/*
-cleanup_selector = ".block-releases-big-list"
+content_selector = ".content"
+cleanup_selector = "header, footer, .block-related-content"
 
 # Pick the title before the first dash or hyphen
 title_selector_regex = '^(.+) [-–]{1}'
