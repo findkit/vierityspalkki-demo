@@ -10,7 +10,7 @@ concurrency = 2
 max_pages = 6000
 
 content_selector = ".content"
-cleanup_selector = "header, footer, .block-related-content"
+cleanup_selector = "header, footer, .block-related-content, .notification-box"
 
 # Pick the title before the first dash or hyphen
 title_selector_regex = '^(.+) [-–]{1}'
