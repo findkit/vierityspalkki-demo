@@ -14,8 +14,8 @@
 	</style>
 
 	<!-- There's only the search on this page. No need to lazy load. -->
-	<link rel="preload" href="https://cdn.findkit.com/ui/v0.16.0/esm/implementation.js" as="script" />
-	<link rel="preload" href="https://cdn.findkit.com/ui/v0.16.0/styles.css" as="style" />
+	<link rel="preload" href="https://cdn.findkit.com/ui/v1.0.3/esm/implementation.js" as="script" />
+	<link rel="preload" href="https://cdn.findkit.com/ui/v1.0.3/styles.css" as="style" />
 
 	<script type="module">
 		// https://docs.findkit.com/ui/setup
@@ -23,7 +23,7 @@
 			FindkitUI,
 			css,
 			html,
-		} from "https://cdn.findkit.com/ui/v0.16.0/esm/index.js";
+		} from "https://cdn.findkit.com/ui/v1.0.3/esm/index.js";
 
 		const ui = new FindkitUI({
 			publicToken: "p4VGZRVGQ",
@@ -39,6 +39,10 @@
 
 				.findkit--highlight {
 				  color: #727272;
+				}
+
+				.findkit--hit:has(:focus) {
+				    outline-color: var(--findkit--brand-color);
 				}
 
 				.logo {
